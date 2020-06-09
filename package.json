@@ -1,0 +1,23 @@
+{
+  "name": "@dobby/linters",
+  "version": "1.0.0",
+  "description": "Dobby Eslint StyleLint CommitLint 规则集合",
+  "main": "./lib/index.js",
+  "repository": "git@github.com:sunweibin/dobby-linters.git",
+  "keywords": [
+    "dobby",
+    "eslint",
+    "stylelint",
+    "commitlint",
+    "react",
+    "react-hooks",
+    "javascript"
+  ],
+  "author": "sunweibin <sunweibin1988@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0"
+  }
+}
