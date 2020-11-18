@@ -9,7 +9,7 @@
     "diff": "node ./scripts/compareLocalAndRemote.js"
   },
   "keywords": [
-    "dobby",
+    "sunweibin",
     "eslint",
     "stylelint",
     "commitlint",
