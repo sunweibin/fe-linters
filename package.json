@@ -1,6 +1,7 @@
 {
   "name": "@dobby/linters",
   "version": "1.0.0",
+  "public": true,
   "description": "Dobby Eslint StyleLint CommitLint 规则集合",
   "main": "./lib/index.js",
   "repository": "git@github.com:sunweibin/dobby-linters.git",
@@ -18,7 +19,6 @@
   ],
   "author": "sunweibin <sunweibin1988@gmail.com>",
   "license": "MIT",
-  "private": false,
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
@@ -28,8 +28,6 @@
   },
   "devDependencies": {
     "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.3",
-    "iconv-lite": "^0.6.2",
     "lodash": "^4.17.20"
   }
 }
