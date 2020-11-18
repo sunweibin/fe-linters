@@ -1,5 +1,3 @@
-module.export = {
-  extends: [
-    './lib/eslint.js'
-  ]
-}
+const { eslint } = require('./lib');
+
+module.exports = eslint;
