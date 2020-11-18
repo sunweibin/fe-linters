@@ -6,8 +6,8 @@
 ## 功能点
 
 - [x] ESLint
-- [x] StyleLint
-- [x] commitLint
+- [] StyleLint
+- [] commitLint
 - [x] prettier
 
 ## 安装
