@@ -243,6 +243,12 @@ module.exports = [
       {
         "recommend": false,
         "fixable": false,
+        "title": "no-unsafe-optional-chaining",
+        "desc": "disallow use of optional chaining in contexts where the `undefined` value is not allowed"
+      },
+      {
+        "recommend": false,
+        "fixable": false,
         "title": "no-useless-backreference",
         "desc": "disallow useless backreferences in regular expressions"
       },
@@ -546,6 +552,12 @@ module.exports = [
         "fixable": false,
         "title": "no-new-wrappers",
         "desc": "disallow `new` operators with the `String`, `Number`, and `Boolean` objects"
+      },
+      {
+        "recommend": false,
+        "fixable": false,
+        "title": "no-nonoctal-decimal-escape",
+        "desc": "disallow `\\8` and `\\9` escape sequences in string literals"
       },
       {
         "recommend": true,
@@ -1046,7 +1058,7 @@ module.exports = [
         "recommend": false,
         "fixable": false,
         "title": "max-lines-per-function",
-        "desc": "enforce a maximum number of line of code in a function"
+        "desc": "enforce a maximum number of lines of code in a function"
       },
       {
         "recommend": false,
@@ -1080,7 +1092,7 @@ module.exports = [
       },
       {
         "recommend": false,
-        "fixable": false,
+        "fixable": true,
         "title": "multiline-ternary",
         "desc": "enforce newlines between operands of ternary expressions"
       },
@@ -1232,7 +1244,7 @@ module.exports = [
         "recommend": false,
         "fixable": true,
         "title": "object-curly-newline",
-        "desc": "enforce consistent line breaks inside braces"
+        "desc": "enforce consistent line breaks after opening and before closing braces"
       },
       {
         "recommend": false,
@@ -1597,4 +1609,4 @@ module.exports = [
       }
     ]
   }
-]
+];
