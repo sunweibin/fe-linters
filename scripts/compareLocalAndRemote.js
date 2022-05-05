@@ -10,7 +10,7 @@ const diff_mapping = [
   {
     title: 'Possible Errors',
     local: '../lib/rules/possible-errors.js',
-    remote: 'possible-errors',
+    remote: 'possible-problems',
   },
   {
     title: 'Best Practices',
@@ -42,14 +42,14 @@ const diff_mapping = [
 const result = {};
 
 function getRemoteGroupRulesKey(groupId) {
-  const ruleGroup = remoteAllRules.find(group => group.id === groupId);
-  return ruleGroup.rules.map(rule => rule.title);
+  const ruleGroup = remoteAllRules.find((group) => group.id === groupId);
+  return ruleGroup.rules.map((rule) => rule.title);
 }
 
 diff_mapping.forEach((item) => {
   const { title, local, remote } = item;
 
-  console.log(chalk.yellowBright('********** '+ title + ' **********'));
+  console.log(chalk.yellowBright(`********** ${title} **********`));
 
   // 获取本地 lib 中的相应分组所有规则的 key 集合
   const localRuleKeys = Object.keys(require(local).rules);
@@ -63,16 +63,16 @@ diff_mapping.forEach((item) => {
   if (_.isEmpty(keysInLocalNotRemote)) {
     console.log('【删除/过期】：无 \n');
   } else {
-    console.log('【删除/过期】：' + keysInLocalNotRemote.join('、') + '\n')
+    console.log(`【删除/过期】：${keysInLocalNotRemote.join('、')}\n`);
   }
 
   console.log(chalk.green('在remote中，但是不在本地lib中有如下:'));
   if (_.isEmpty(keysInRemoteNotLocal)) {
     console.log('【新增】：无\n');
   } else {
-    console.log('【新增】：' + keysInRemoteNotLocal.join('、') + '\n')
+    console.log(`【新增】：${keysInRemoteNotLocal.join('、')}\n`);
   }
 
-  console.log(chalk.yellowBright('********** '+ title + ' **********'));
+  console.log(chalk.yellowBright(`********** ${title} **********`));
   console.log('\n');
 });
