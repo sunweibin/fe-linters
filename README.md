@@ -23,7 +23,14 @@ yarn add @sunweibin/linters
 项目根目录创建 `.eslintrc.js`
 
 ```js
-const { eslint } = require('@sunweibin/linters');
+const { eslint, lintMerge } = require('@sunweibin/linters');
 
-module.exports = eslint;
+module.exports = lintMerge(eslint, {
+  parserOptions: {
+    // 使用项目的 babel 配置
+    babelOptions: {
+      configFile: './babel.config.js',
+    },
+  },
+});
 ```
