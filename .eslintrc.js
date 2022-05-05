@@ -1,3 +1,9 @@
-const { eslint } = require('./lib');
+const { eslint, lintMerge } = require('./lib');
 
-module.exports = eslint;
+module.exports = lintMerge(eslint, {
+  parserOptions: {
+    babelOptions: {
+      configFile: './babel.config.js',
+    },
+  },
+});
