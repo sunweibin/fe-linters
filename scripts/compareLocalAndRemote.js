@@ -3,39 +3,24 @@
 // 比较本地包与远程 ESLint.org 上的规则集差异
 const chalk = require('chalk');
 const _ = require('lodash');
-const fs = require('fs');
+// const fs = require('fs');
 const remoteAllRules = require('./eslintOrgAllRules');
 
-const diff_mapping = [
+const DIFF_MAPPING = [
   {
-    title: 'Possible Errors',
-    local: '../lib/rules/possible-errors.js',
+    title: 'Possible Problems',
+    local: '../lib/eslintRules/possible-problems.js',
     remote: 'possible-problems',
   },
   {
-    title: 'Best Practices',
-    local: '../lib/rules/best-practices.js',
-    remote: 'best-practices',
+    title: 'Suggestions',
+    local: '../lib/eslintRules/suggestions.js',
+    remote: 'suggestions',
   },
   {
-    title: 'Strict Mode',
-    local: '../lib/rules/strict.js',
-    remote: 'strict-mode',
-  },
-  {
-    title: 'Variables',
-    local: '../lib/rules/variables.js',
-    remote: 'variables',
-  },
-  {
-    title: 'Stylistic Issues',
-    local: '../lib/rules/stylistic-issues.js',
-    remote: 'stylistic-issues',
-  },
-  {
-    title: 'ECMAScript 6',
-    local: '../lib/rules/es6.js',
-    remote: 'ecmascript-6',
+    title: 'Layout & Formatting',
+    local: '../lib/eslintRules/layout-formatting.js',
+    remote: 'layout-formatting',
   },
 ];
 
@@ -46,7 +31,7 @@ function getRemoteGroupRulesKey(groupId) {
   return ruleGroup.rules.map((rule) => rule.title);
 }
 
-diff_mapping.forEach((item) => {
+DIFF_MAPPING.forEach((item) => {
   const { title, local, remote } = item;
 
   console.log(chalk.yellowBright(`********** ${title} **********`));

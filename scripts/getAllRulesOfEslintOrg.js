@@ -16,7 +16,7 @@ function getEslintGroups() {
 
 function parseRuleTR(ruleLineNode) {
   const rule = {};
-  const [recommendedTD, fixableTD, titleTD, descTD] = ruleLineNode.querySelectorAll('td');
+  const [recommendedTD, fixableTD, , titleTD, descTD] = ruleLineNode.querySelectorAll('td');
   rule.recommend = !!recommendedTD.querySelector('span[title="recommended"]');
   rule.fixable = !!fixableTD.querySelector('span[title="fixable"]');
   rule.title = titleTD.innerText;
