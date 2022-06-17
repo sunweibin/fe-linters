@@ -9,16 +9,6 @@ function getXXX(a, b, c) {}
 
 getXXX(1, 2, 3);
 
-const arr = [
-  { a: 1 },
-  {
-    a: 1,
-  },
-  { a: 1 },
-  { a: 1 },
-  { a: 1 },
-];
-
 const [one, two, three, four, five] = arr;
 
 const obj = {
@@ -26,8 +16,8 @@ const obj = {
   b: 2,
 };
 
-class X {
-  constructor() {}
+function doSomething(condition) {
+  if (condition) {
+    return 1;
+  }
 }
-
-class Y {}
