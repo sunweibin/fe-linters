@@ -6,7 +6,7 @@
 ## 功能点
 
 - [x] ESLint
-- [ ] StyleLint
+- [x] StyleLint
 - [ ] commitLint
 - [x] prettier
 
@@ -33,4 +33,24 @@ module.exports = lintMerge(eslint, {
     },
   },
 });
+```
+
+### prettier [rules](/lib/prettier.js)
+
+项目根目录创建 `.prettierrc.js`
+
+```js
+const { prettier } = require('@sunweibin/linters');
+
+module.exports = prettier;
+```
+
+### stylelint [rules](/lib/stylelint.js)
+
+项目根目录创建 `.stylelintrc.js`
+
+```js
+const { stylelint } = require('@sunweibin/linters');
+
+module.exports = stylelint;
 ```
