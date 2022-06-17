@@ -24,7 +24,8 @@
     "@babel/eslint-parser": "^7.18.2",
     "eslint": "^8.17.0",
     "eslint-plugin-import": "^2.26.0",
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.9.1",
+    "stylelint-config-property-sort-order-smacss": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
