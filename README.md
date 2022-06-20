@@ -6,6 +6,7 @@
 ## 功能点
 
 - [x] ESLint
+- [x] ReactLint
 - [x] StyleLint
 - [ ] commitLint
 
@@ -25,6 +26,23 @@ yarn add @sunweibin/linters
 const { eslint, lintMerge } = require('@sunweibin/linters');
 
 module.exports = lintMerge(eslint, {
+  parserOptions: {
+    // 使用项目的 babel 配置
+    babelOptions: {
+      configFile: './babel.config.js',
+    },
+  },
+});
+```
+
+### reactlint [rules](/lib/reactlint.js)
+
+如果项目使用 React ,项目根目录创建 `.eslintrc.js`
+
+```js
+const { reactlint, lintMerge } = require('@sunweibin/linters');
+
+module.exports = lintMerge(reactlint, {
   parserOptions: {
     // 使用项目的 babel 配置
     babelOptions: {
