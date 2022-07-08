@@ -21,3 +21,9 @@ function doSomething(condition) {
     return 1;
   }
 }
+
+window.getBack?.();
+
+const d = obj?.d;
+
+obj?.d?.();
