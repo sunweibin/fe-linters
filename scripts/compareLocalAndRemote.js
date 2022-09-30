@@ -20,7 +20,7 @@ const DIFF_MAPPING = [
   {
     title: 'Layout & Formatting',
     local: '../lib/eslintRules/layout-formatting.js',
-    remote: 'layout-formatting',
+    remote: 'layout--formatting',
   },
 ];
 
@@ -32,7 +32,9 @@ function getRemoteGroupRulesKey(groupId) {
 }
 
 DIFF_MAPPING.forEach((item) => {
-  const { title, local, remote } = item;
+  const {
+    title, local, remote,
+  } = item;
 
   console.log(chalk.yellowBright(`********** ${title} **********`));
 
