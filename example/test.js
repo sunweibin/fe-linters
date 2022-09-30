@@ -17,6 +17,7 @@ const obj = {
 };
 
 function doSomething(condition) {
+  const { name } = condition;
   if (condition) {
     return 1;
   }
